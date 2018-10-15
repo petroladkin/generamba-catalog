@@ -1,0 +1,32 @@
+# Template information section
+name: "datasourceSwift"
+summary: "DataSource module with use DI Swinject"
+author: "Petro Ladkin"
+version: "0.0.1"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# DataSource
+- {name: DataSource.swift, path: Code/datasource.swift.liquid}
+
+# Impl layer
+- {name: Impl/DataSourceImpl.swift,  path: Code/Impl/datasource_impl.swift.liquid}
+
+# Assembly
+- {name: Assembly/DataSourceAssembly.swift, path: Code/Assembly/datasource_assembly.swift.liquid}
+
+# The declarations for test files
+test_files:
+
+# Mock layer
+#- {name: Mock/DataSourceMock.swift, path: Code/Mock/datasource_mock.swift.liquid}
+
+
+# Template dependencies
+dependencies:
+- Swinject
+#- Quick
+#- Nimble

@@ -1,0 +1,20 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Swinject
+
+
+final class {{ module_info.name }}ServiceAssembly: Assembly {
+
+    func assemble(container: Container) {
+
+        container.register({{ module_info.name }}Service.self) { r in
+            let service = {{ module_info.name }}ServiceImpl()
+
+            // MARK: insert here internal dependencies
+
+            return service
+        }
+    }
+}

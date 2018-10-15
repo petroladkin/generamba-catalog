@@ -1,0 +1,32 @@
+# Template information section
+name: "serviceSwift"
+summary: "Service module with use DI Swinject"
+author: "Petro Ladkin"
+version: "0.0.1"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# Service
+- {name: Service.swift, path: Code/service.swift.liquid}
+
+# Impl layer
+- {name: Impl/ServiceImpl.swift,  path: Code/Impl/service_impl.swift.liquid}
+
+# Assembly
+- {name: Assembly/ServiceAssembly.swift, path: Code/Assembly/service_assembly.swift.liquid}
+
+# The declarations for test files
+test_files:
+
+# Mock layer
+#- {name: Mock/ServiceMock.swift, path: Code/Mock/service_mock.swift.liquid}
+
+
+# Template dependencies
+dependencies:
+- Swinject
+#- Quick
+#- Nimble
