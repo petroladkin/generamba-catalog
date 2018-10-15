@@ -1,0 +1,36 @@
+{% include 'header' %}
+
+import Swinject
+import SwinjectStoryboard
+
+
+final class AppAssembly {
+    
+    fileprivate static var _assembler: Assembler?
+    
+	//Use default dependency
+	class var assembler: Assembler {
+        if let assembler = _assembler {
+            return assembler
+        }
+
+        _assembler = Assembler()
+        
+        _assembler?.apply(assemblies: ServicesAssemblies.assemblies)
+        _assembler?.apply(assemblies: DataSourcesAssemblies.assemblies)
+        _assembler?.apply(assemblies: RepositoriesAssemblies.assemblies)
+        _assembler?.apply(assemblies: EntitiesAssemblies.assemblies)
+        _assembler?.apply(assemblies: ModulesAssemblies.assemblies)
+
+        return _assembler!
+    }
+}
+
+
+//Inject dependency in Main Storyboard
+extension SwinjectStoryboard {
+
+    @objc class func setup() {
+        defaultContainer = AppAssembly.assembler.resolver as! Container
+    }
+}

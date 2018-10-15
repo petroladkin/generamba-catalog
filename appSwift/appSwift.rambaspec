@@ -1,0 +1,40 @@
+# Template information section
+name: "appSwift"
+summary: "General App template"
+author: "Petro Ladkin"
+version: "0.0.1"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# App Assembly
+- {name: AppAssembly.swift, path: Code/app_assembly.swift.liquid}
+
+# Modules Assemblies
+- {name: Modules/ModulesAssemblies.swift, path: Code/modules_assemblies.swift.liquid}
+
+# Repositories Assemblies
+- {name: Repositories/RepositoriesAssemblies.swift, path: Code/repositories_assemblies.swift.liquid}
+
+# Entities Assemblies
+- {name: Entities/EntitiesAssemblies.swift, path: Code/entities_assemblies.swift.liquid}
+
+# DataSources Assemblies
+- {name: DataSources/DataSourcesAssemblies.swift, path: Code/datasources_assemblies.swift.liquid}
+
+# Services Assemblies
+- {name: Services/ServicesAssemblies.swift, path: Code/services_assemblies.swift.liquid}
+
+
+# The declarations for test files
+test_files:
+
+
+# Template dependencies
+dependencies:
+- Swinject
+- SwinjectStoryboard
+#- Quick
+#- Nimble
