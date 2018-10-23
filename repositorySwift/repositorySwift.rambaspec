@@ -2,7 +2,7 @@
 name: "repositorySwift"
 summary: "Repository module with use DI Swinject"
 author: "Petro Ladkin"
-version: "0.0.1"
+version: "0.1.1.0"
 license: "MIT"
 
 # The declarations for code files
@@ -18,15 +18,19 @@ code_files:
 # Assembly
 - {name: Assembly/RepositoryAssembly.swift, path: Code/Assembly/repository_assembly.swift.liquid}
 
+# Dependencies
+- {name: Dependencies/ReadMe.md, path: Code/Dependencies/readme.md}
+
 # The declarations for test files
 test_files:
 
-# Mock layer
-#- {name: Mock/RepositoryMock.swift, path: Code/Mock/repository_mock.swift.liquid}
+- {name: Assembly/RepositorySpecAssembly.swift, path: Tests/Assembly/repository_spec_assembly.swift.liquid}
+- {name: Impl/RepositoryImplSpec.swift, path: Tests/Impl/repository_impl_spec.swift.liquid}
+- {name: Dependencies/ReadMe.md, path: Tests/Dependencies/readme.md}
 
 
 # Template dependencies
 dependencies:
 - Swinject
-#- Quick
-#- Nimble
+- Quick
+- Nimble

@@ -1,0 +1,33 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Quick
+import Nimble
+import Swinject
+
+@testable import {{ module_info.project_name }}
+
+
+class {{ module_info.name }}DataSourceImplSpec: QuickSpec {
+    
+    override func spec() {
+        describe("{{ module_info.name }}DataSource") {
+            let assembler = Assembler([{{ module_info.name }}DataSourceSpecAssembly()])
+            var datasource: {{ module_info.name }}DataSource!
+            beforeEach {
+                datasource = assembler.resolver.resolve({{ module_info.name }}DataSource.self)!
+            }
+            
+            afterEach {
+            }
+            
+            context("[insert here contex name]") {
+
+                it("[insert here it name]") {
+                    
+                }
+            }
+        }
+    }
+}

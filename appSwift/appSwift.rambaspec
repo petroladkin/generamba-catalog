@@ -2,7 +2,7 @@
 name: "appSwift"
 summary: "General App template"
 author: "Petro Ladkin"
-version: "0.0.1"
+version: "0.1.1.0"
 license: "MIT"
 
 # The declarations for code files
@@ -36,5 +36,3 @@ test_files:
 dependencies:
 - Swinject
 - SwinjectStoryboard
-#- Quick
-#- Nimble

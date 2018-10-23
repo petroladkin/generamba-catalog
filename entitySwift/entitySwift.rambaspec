@@ -2,7 +2,7 @@
 name: "entitySwift"
 summary: "Entity module with use DI Swinject"
 author: "Petro Ladkin"
-version: "0.0.1"
+version: "0.1.1.0"
 license: "MIT"
 
 # The declarations for code files
@@ -18,15 +18,19 @@ code_files:
 # Assembly
 - {name: Assembly/EntityAssembly.swift, path: Code/Assembly/entity_assembly.swift.liquid}
 
+# Dependencies
+- {name: Dependencies/ReadMe.md, path: Code/Dependencies/readme.md}
+
 # The declarations for test files
 test_files:
 
-# Mock layer
-#- {name: Mock/EntityMock.swift, path: Code/Mock/entity_mock.swift.liquid}
+- {name: Assembly/EntitySpecAssembly.swift, path: Tests/Assembly/entity_spec_assembly.swift.liquid}
+- {name: Impl/EntityImplSpec.swift, path: Tests/Impl/entity_impl_spec.swift.liquid}
+- {name: Dependencies/ReadMe.md, path: Tests/Dependencies/readme.md}
 
 
 # Template dependencies
 dependencies:
 - Swinject
-#- Quick
-#- Nimble
+- Quick
+- Nimble

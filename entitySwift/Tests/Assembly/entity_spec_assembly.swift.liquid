@@ -1,0 +1,20 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Swinject
+
+@testable import {{ module_info.project_name }}
+
+
+final class {{ module_info.name }}EntitySpecAssembly: Assembly {
+    
+    func assemble(container: Container) {
+        
+        container.register({{ module_info.name }}Entity.self) { _ in
+            let entity = {{ module_info.name }}EntityImpl()
+            
+            return entity
+        }.inObjectScope(.container)
+    }
+}

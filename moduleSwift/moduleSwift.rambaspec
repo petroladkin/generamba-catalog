@@ -2,7 +2,7 @@
 name: "moduleSwift"
 summary: "Viper module with use DI Swinject, DI SwinjectStoryboard and routing LightRoute"
 author: "Petro Ladkin"
-version: "0.0.1"
+version: "0.1.1.0"
 license: "MIT"
 
 # The declarations for code files
@@ -33,24 +33,24 @@ code_files:
 test_files:
 
 # Configurators tests
-# - {name: Assembly/ContainerTests.swift, path: Tests/Configurator/configurator_tests.swift.liquid}
+#- {name: Assembly/ModuleSpecAssembly.swift, path: Tests/Assembly/module_spec_assembly.swift.liquid}
 
 # View tests
-# - {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
+#- {name: View/ViewSpec.swift, path: Tests/View/view_spec.swift.liquid}
 
 # Interactor tests
-# - {name: Interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
+#- {name: Interactor/InteractorSpec.swift, path: Tests/Interactor/interactor_spec.swift.liquid}
 
 # Presenter tests
-# - {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
+#- {name: Presenter/PresenterSpec.swift, path: Tests/Presenter/presenter_spec.swift.liquid}
 
 # Router tests
-# - {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
+#- {name: Router/RouterSpec.swift, path: Tests/Router/router_spec.swift.liquid}
 
 # Template dependencies
 dependencies:
 - Swinject
 - SwinjectStoryboard
 - LightRoute
-#- Quick
-#- Nimble
+- Quick
+- Nimble

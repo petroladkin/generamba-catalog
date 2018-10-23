@@ -1,0 +1,33 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Quick
+import Nimble
+import Swinject
+
+@testable import {{ module_info.project_name }}
+
+
+class {{ module_info.name }}EntityImplSpec: QuickSpec {
+    
+    override func spec() {
+        describe("{{ module_info.name }}Entity") {
+            let assembler = Assembler([{{ module_info.name }}EntitySpecAssembly()])
+            var entity: {{ module_info.name }}Entity!
+            beforeEach {
+                entity = assembler.resolver.resolve({{ module_info.name }}Entity.self)!
+            }
+            
+            afterEach {
+            }
+            
+            context("[insert here contex name]") {
+
+                it("[insert here it name]") {
+                    
+                }
+            }
+        }
+    }
+}

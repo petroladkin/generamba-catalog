@@ -1,0 +1,33 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Quick
+import Nimble
+import Swinject
+
+@testable import {{ module_info.project_name }}
+
+
+class {{ module_info.name }}RepositoryImplSpec: QuickSpec {
+    
+    override func spec() {
+        describe("{{ module_info.name }}Repository") {
+            let assembler = Assembler([{{ module_info.name }}RepositorySpecAssembly()])
+            var repository: {{ module_info.name }}Repository!
+            beforeEach {
+                repository = assembler.resolver.resolve({{ module_info.name }}Repository.self)!
+            }
+            
+            afterEach {
+            }
+            
+            context("[insert here contex name]") {
+
+                it("[insert here it name]") {
+                    
+                }
+            }
+        }
+    }
+}

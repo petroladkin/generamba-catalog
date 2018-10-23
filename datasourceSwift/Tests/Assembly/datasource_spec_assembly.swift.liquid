@@ -1,0 +1,20 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Swinject
+
+@testable import {{ module_info.project_name }}
+
+
+final class {{ module_info.name }}DataSourceSpecAssembly: Assembly {
+    
+    func assemble(container: Container) {
+        
+        container.register({{ module_info.name }}DataSource.self) { _ in
+            let datasource = {{ module_info.name }}DataSourceImpl()
+            
+            return datasource
+        }.inObjectScope(.container)
+    }
+}

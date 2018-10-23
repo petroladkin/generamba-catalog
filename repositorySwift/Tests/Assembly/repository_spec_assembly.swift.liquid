@@ -1,0 +1,20 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Swinject
+
+@testable import {{ module_info.project_name }}
+
+
+final class {{ module_info.name }}RepositorySpecAssembly: Assembly {
+    
+    func assemble(container: Container) {
+        
+        container.register({{ module_info.name }}Repository.self) { _ in
+            let repository = {{ module_info.name }}RepositoryImpl()
+            
+            return repository
+        }.inObjectScope(.container)
+    }
+}

@@ -1,0 +1,20 @@
+//
+//  {{ module_info.file_name }}
+{% include 'header' %}
+
+import Swinject
+
+@testable import {{ module_info.project_name }}
+
+
+final class {{ module_info.name }}ServiceSpecAssembly: Assembly {
+    
+    func assemble(container: Container) {
+        
+        container.register({{ module_info.name }}Service.self) { _ in
+            let service = {{ module_info.name }}ServiceImpl()
+            
+            return service
+        }.inObjectScope(.container)
+    }
+}

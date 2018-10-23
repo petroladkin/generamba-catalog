@@ -2,7 +2,7 @@
 name: "datasourceSwift"
 summary: "DataSource module with use DI Swinject"
 author: "Petro Ladkin"
-version: "0.0.1"
+version: "0.1.1.0"
 license: "MIT"
 
 # The declarations for code files
@@ -18,15 +18,19 @@ code_files:
 # Assembly
 - {name: Assembly/DataSourceAssembly.swift, path: Code/Assembly/datasource_assembly.swift.liquid}
 
+# Dependencies
+- {name: Dependencies/ReadMe.md, path: Code/Dependencies/readme.md}
+
 # The declarations for test files
 test_files:
 
-# Mock layer
-#- {name: Mock/DataSourceMock.swift, path: Code/Mock/datasource_mock.swift.liquid}
+- {name: Assembly/DataSourceSpecAssembly.swift, path: Tests/Assembly/datasource_spec_assembly.swift.liquid}
+- {name: Impl/DataSourceImplSpec.swift, path: Tests/Impl/datasource_impl_spec.swift.liquid}
+- {name: Dependencies/ReadMe.md, path: Tests/Dependencies/readme.md}
 
 
 # Template dependencies
 dependencies:
 - Swinject
-#- Quick
-#- Nimble
+- Quick
+- Nimble
